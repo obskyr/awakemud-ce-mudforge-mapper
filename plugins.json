@@ -11,7 +11,7 @@
             "description": "Make MudForge’s built-in map widget compatible with the venerable AwakeMUD CE.",
             "category": "utilities",
             "downloadUrl": "AwakeMUD CE Mapper.lua",
-            "sha256": "9c90dd5d1384c3c2c283d5bcdf8f17caeb0648894962cfa64096b7c5ae365930"
+            "sha256": "85fefd9e2945de4a2ea650854a84a2d90cc57da3c927e6ae8e4a73f7ff3eca99"
         }
     ]
 }
