@@ -1,6 +1,6 @@
 plugin = {
   name        = "AwakeMUD CE Mapper",
-  version     = "0.1.1-dev",
+  version     = "0.1.1",
   author      = "Molly Memories",
   description = "Make MudForge’s built-in map widget compatible with the venerable AwakeMUD CE."
 }
