@@ -6,12 +6,12 @@
         {
             "id": "awakemud-ce-mapper",
             "name": "AwakeMUD CE Mapper",
-            "version": "0.1.1",
+            "version": "0.1.2-dev",
             "author": "Molly Memories",
             "description": "Make MudForge’s built-in map widget compatible with the venerable AwakeMUD CE.",
             "category": "utilities",
             "downloadUrl": "AwakeMUD CE Mapper.lua",
-            "sha256": "ed81908c68ede4852266b128e9b7825350484a32895fc9fdf1837067184e672a"
+            "sha256": "6a15915be2c8937ea55efd78921176d236556e782ade932503dd9dfda972a4e8"
         }
     ]
 }
