@@ -1,0 +1,16 @@
+{
+    "Lua.workspace.library": ["/.vscode"],
+    "Lua.diagnostics.globals": [
+        "plugin",
+        "onMapReady",
+        "getPlayerRoom",
+        "onGMCPUpdate",
+        "string.trim",
+        "addTrigger",
+        "setDoor",
+        "getDoors",
+        "setMapExit",
+        "setRoomFlag",
+        "updateMapRoom"
+    ]
+}

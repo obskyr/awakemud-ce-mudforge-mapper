@@ -1,6 +1,6 @@
 plugin = {
   name        = "AwakeMUD CE Mapper",
-  version     = "0.1.0-dev",
+  version     = "0.1.0",
   author      = "Molly Memories",
   description = "Make MudForge’s built-in map widget compatible with the venerable AwakeMUD CE."
 }
@@ -27,7 +27,7 @@ local REGEX_TO_FLAG = {
     ['^...(?:he|she|they) might have a job for you.']                               = 'johnson',
     ['^...See HELP ATM for details.$']                                              = 'atm',
     ['^...(?:(?:he|she) looks|they look) willing to help you practice your skills'] = 'teacher',
-    ['^[\w\' ]+ \(Treacherous\)$']                                                  = 'treacherous'
+    ['^[\\w\' ]+ \\(Treacherous\\)$']                                               = 'treacherous'
 }
 
 
@@ -38,18 +38,18 @@ local REGEX_TO_FLAG = {
 -- in its development, it has an *incredibly* large feature set, but, er…
 -- things don’t always work very *well,* since they weren’t tested
 -- properly or developed with enough intention. What a world.
-currentPlayerRoomVnum = nil
+CurrentPlayerRoomNum = nil
 
 
 -- `getPlayerRoom()` *is,* however, set to your starting room, at least.
 -- …It seems.
 onMapReady(function()
-    currentPlayerRoomVnum = getPlayerRoom()
+    CurrentPlayerRoomNum = getPlayerRoom()
 end)
 
 
 onGMCPUpdate('Room.Info', function(room)
-    currentPlayerRoomVnum = room.vnum
+    CurrentPlayerRoomNum = room.vnum
 
     local formattedDescription = string.trim(room.description)
     -- Might be a bit of a naïve text unwrap, but. Eh.
@@ -87,10 +87,10 @@ end)
 
 for regex, flag in pairs(REGEX_TO_FLAG) do
     addTrigger(regex, function()
-        -- We shouldn’t need to check if `currentPlayerRoomVnum` is nil or not here,
+        -- We shouldn’t need to check if `CurrentPlayerRoomNum` is nil or not here,
         -- since we set it in `onMapReady`, but let’s be safe.
-        if currentPlayerRoomVnum then
-            setRoomFlag(currentPlayerRoomVnum, flag, true)
+        if CurrentPlayerRoomNum then
+            setRoomFlag(CurrentPlayerRoomNum, flag, true)
         end
     end, {type = 'regex'})
 end
